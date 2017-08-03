@@ -115,7 +115,10 @@ class Canvas extends React.Component {
         onMouseMove={this.onMouseMove}>
         </canvas>
         <p>Result:{this.state.text}</p>
-        <p><a className="btn btn-primary" onClick={this.initialize}>Clear</a></p>
+        <p>
+          <a className="btn btn-primary" data-toggle="collapse" data-target="#navHeader" aria-expanded="false">Contact</a>
+          <a className="btn btn-default" onClick={this.initialize}> Clear </a>
+        </p>
 
 		</div>
     	);

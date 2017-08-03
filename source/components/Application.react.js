@@ -1,7 +1,6 @@
 import Canvas from './Canvas.react';
+import Navbar from './Navbar.react';
 import React from 'react';
-import MediaQuery from 'react-responsive';
-
 
 class Application extends React.Component {
   render() {
@@ -11,6 +10,8 @@ class Application extends React.Component {
 
     return (
     	<div>
+    		<Navbar />
+
 		    <div className="jumbotron" style={jumboStyle}>
 		    	<h1>Draw Something</h1>
 		      	<Canvas height="350" width="350" lineWidth="20"/>
