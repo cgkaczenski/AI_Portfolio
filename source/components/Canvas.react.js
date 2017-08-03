@@ -1,13 +1,6 @@
-import Accuracy from './Accuracy.react';
 import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Grid } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import { PageHeader } from 'react-bootstrap';
-import { Jumbotron } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 
 class Canvas extends React.Component {
 	constructor(props) {
@@ -122,7 +115,7 @@ class Canvas extends React.Component {
         onMouseMove={this.onMouseMove}>
         </canvas>
         <p>Result:{this.state.text}</p>
-        <p><Button bsStyle="primary" onClick={this.initialize}>Clear</Button></p>
+        <p><a className="btn btn-primary" onClick={this.initialize}>Clear</a></p>
 
 		</div>
     	);
