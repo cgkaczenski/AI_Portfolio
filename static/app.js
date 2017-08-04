@@ -20523,6 +20523,178 @@ module.exports = require('./lib/React');
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Album = function (_React$Component) {
+  _inherits(Album, _React$Component);
+
+  function Album() {
+    _classCallCheck(this, Album);
+
+    return _possibleConstructorReturn(this, (Album.__proto__ || Object.getPrototypeOf(Album)).apply(this, arguments));
+  }
+
+  _createClass(Album, [{
+    key: 'render',
+    value: function render() {
+
+      var thumbStyle = {
+        width: '250px',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      };
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-6 col-md-4 col-lg-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'thumbnail', style: thumbStyle },
+              _react2.default.createElement('img', { src: 'http://via.placeholder.com/242x200' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'caption' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'Thumbnail label'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-6 col-md-4 col-lg-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'thumbnail', style: thumbStyle },
+              _react2.default.createElement('img', { src: 'http://via.placeholder.com/242x200' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'caption' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'Thumbnail label'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-6 col-md-4 col-lg-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'thumbnail', style: thumbStyle },
+              _react2.default.createElement('img', { src: 'http://via.placeholder.com/242x200' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'caption' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'Thumbnail label'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-6 col-md-4 col-lg-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'thumbnail', style: thumbStyle },
+              _react2.default.createElement('img', { src: 'http://via.placeholder.com/242x200' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'caption' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'Thumbnail label'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-sm-6 col-md-4 col-lg-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'thumbnail', style: thumbStyle },
+              _react2.default.createElement('img', { src: 'http://via.placeholder.com/242x200' }),
+              _react2.default.createElement(
+                'div',
+                { className: 'caption' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'Thumbnail label'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.'
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement('div', { className: 'row' })
+      );
+    }
+  }]);
+
+  return Album;
+}(_react2.default.Component);
+
+module.exports = Album;
+
+},{"react":183}],185:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _Album = require('./Album.react');
+
+var _Album2 = _interopRequireDefault(_Album);
+
 var _Canvas = require('./Canvas.react');
 
 var _Canvas2 = _interopRequireDefault(_Canvas);
@@ -20544,107 +20716,46 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Application = function (_React$Component) {
-		_inherits(Application, _React$Component);
+  _inherits(Application, _React$Component);
 
-		function Application() {
-				_classCallCheck(this, Application);
+  function Application() {
+    _classCallCheck(this, Application);
 
-				return _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).apply(this, arguments));
-		}
+    return _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).apply(this, arguments));
+  }
 
-		_createClass(Application, [{
-				key: 'render',
-				value: function render() {
-						var jumboStyle = {
-								textAlign: 'center !important'
-						};
+  _createClass(Application, [{
+    key: 'render',
+    value: function render() {
+      var jumboStyle = {
+        textAlign: 'center !important'
+      };
 
-						return _react2.default.createElement(
-								'div',
-								null,
-								_react2.default.createElement(_Navbar2.default, null),
-								_react2.default.createElement(
-										'div',
-										{ className: 'jumbotron', style: jumboStyle },
-										_react2.default.createElement(
-												'h1',
-												null,
-												'Draw Something'
-										),
-										_react2.default.createElement(_Canvas2.default, { height: '350', width: '350', lineWidth: '20' })
-								),
-								_react2.default.createElement(
-										'div',
-										{ className: 'row' },
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										),
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										),
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										)
-								),
-								_react2.default.createElement(
-										'div',
-										{ className: 'row' },
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										),
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										),
-										_react2.default.createElement(
-												'div',
-												{ className: 'col-md-4' },
-												_react2.default.createElement(
-														'p',
-														null,
-														'Project 1'
-												)
-										)
-								)
-						);
-				}
-		}]);
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(
+          'div',
+          { className: 'jumbotron', style: jumboStyle },
+          _react2.default.createElement(
+            'h1',
+            null,
+            'Draw Something'
+          ),
+          _react2.default.createElement(_Canvas2.default, { height: '350', width: '350', lineWidth: '20' })
+        ),
+        _react2.default.createElement(_Album2.default, null)
+      );
+    }
+  }]);
 
-		return Application;
+  return Application;
 }(_react2.default.Component);
 
 module.exports = Application;
 
-},{"./Canvas.react":185,"./Navbar.react":186,"react":183}],185:[function(require,module,exports){
+},{"./Album.react":184,"./Canvas.react":186,"./Navbar.react":187,"react":183}],186:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20831,7 +20942,7 @@ var Canvas = function (_React$Component) {
 
 module.exports = Canvas;
 
-},{"axios":1,"react":183,"react-dom":54}],186:[function(require,module,exports){
+},{"axios":1,"react":183,"react-dom":54}],187:[function(require,module,exports){
 "use strict";
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -20915,7 +21026,7 @@ var Navbar = function (_React$Component) {
 
 module.exports = Navbar;
 
-},{"react":183}],187:[function(require,module,exports){
+},{"react":183}],188:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -20934,4 +21045,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(_Application2.default, null), document.getElementById('root'));
 
-},{"./components/Application.react":184,"react":183,"react-dom":54}]},{},[187]);
+},{"./components/Application.react":185,"react":183,"react-dom":54}]},{},[188]);
