@@ -20943,11 +20943,11 @@ var Canvas = function (_React$Component) {
 module.exports = Canvas;
 
 },{"axios":1,"react":183,"react-dom":54}],187:[function(require,module,exports){
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -20960,68 +20960,113 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var Navbar = function (_React$Component) {
-  _inherits(Navbar, _React$Component);
+		_inherits(Navbar, _React$Component);
 
-  function Navbar() {
-    _classCallCheck(this, Navbar);
+		function Navbar() {
+				_classCallCheck(this, Navbar);
 
-    return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
-  }
+				return _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).apply(this, arguments));
+		}
 
-  _createClass(Navbar, [{
-    key: "render",
-    value: function render() {
+		_createClass(Navbar, [{
+				key: 'render',
+				value: function render() {
 
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "nav",
-          { className: "navbar navbar-inverse navbar-fixed-top" },
-          _react2.default.createElement(
-            "div",
-            { className: "container-fluid" },
-            _react2.default.createElement(
-              "div",
-              { className: "collapse navbar-collapse", id: "navHeader" },
-              _react2.default.createElement(
-                "ul",
-                { className: "nav navbar-nav" },
-                _react2.default.createElement(
-                  "li",
-                  { className: "active" },
-                  _react2.default.createElement(
-                    "a",
-                    { href: "#" },
-                    "Link"
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "navbar-header" },
-              _react2.default.createElement(
-                "button",
-                { type: "button", className: "navbar-toggle", "data-toggle": "collapse", "data-target": "#navHeader", "aria-expanded": "false" },
-                _react2.default.createElement("span", { className: "sr-only" }),
-                _react2.default.createElement("span", { className: "icon-bar" }),
-                _react2.default.createElement("span", { className: "icon-bar" }),
-                _react2.default.createElement("span", { className: "icon-bar" })
-              ),
-              _react2.default.createElement(
-                "a",
-                { className: "navbar-brand", href: "#" },
-                "Brand"
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
+						var textStyle = {
+								color: '#9d9d9d'
+						};
 
-  return Navbar;
+						var contactStyle = {
+								color: '#9d9d9d',
+								listStyle: 'none'
+						};
+
+						var buttonStyle = {
+								marginRight: '20%'
+						};
+
+						return _react2.default.createElement(
+								'div',
+								null,
+								_react2.default.createElement(
+										'nav',
+										{ className: 'navbar navbar-inverse navbar-fixed-top' },
+										_react2.default.createElement(
+												'div',
+												{ className: 'container-fluid' },
+												_react2.default.createElement(
+														'div',
+														{ className: 'collapse navbar-collapse', id: 'navHeader' },
+														_react2.default.createElement(
+																'div',
+																{ className: 'row' },
+																_react2.default.createElement('div', { className: 'col-md-2 col-lg-2' }),
+																_react2.default.createElement(
+																		'div',
+																		{ className: 'col-sm-8 col-md-3 col-lg-3' },
+																		_react2.default.createElement(
+																				'h4',
+																				{ style: textStyle },
+																				'About'
+																		),
+																		_react2.default.createElement(
+																				'p',
+																				{ style: textStyle },
+																				'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.'
+																		)
+																),
+																_react2.default.createElement('div', { className: 'col-md-4 col-lg-4' }),
+																_react2.default.createElement(
+																		'div',
+																		{ className: 'col-sm-4 col-md-3 col-lg-3' },
+																		_react2.default.createElement(
+																				'h4',
+																				{ style: textStyle },
+																				'Contact'
+																		),
+																		_react2.default.createElement(
+																				'ul',
+																				{ style: contactStyle },
+																				_react2.default.createElement(
+																						'li',
+																						null,
+																						'Email'
+																				),
+																				_react2.default.createElement(
+																						'li',
+																						null,
+																						'Github'
+																				)
+																		)
+																)
+														)
+												),
+												_react2.default.createElement(
+														'div',
+														{ className: 'navbar-header row' },
+														_react2.default.createElement('div', { className: 'col-md-2 col-lg-2' }),
+														_react2.default.createElement(
+																'a',
+																{ className: 'navbar-brand', href: '#' },
+																'Brand'
+														),
+														_react2.default.createElement(
+																'button',
+																{ type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', style: buttonStyle,
+																		'data-target': '#navHeader', 'aria-expanded': 'false' },
+																_react2.default.createElement('span', { className: 'sr-only' }),
+																_react2.default.createElement('span', { className: 'icon-bar' }),
+																_react2.default.createElement('span', { className: 'icon-bar' }),
+																_react2.default.createElement('span', { className: 'icon-bar' })
+														)
+												)
+										)
+								)
+						);
+				}
+		}]);
+
+		return Navbar;
 }(_react2.default.Component);
 
 module.exports = Navbar;
