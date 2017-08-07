@@ -19,8 +19,9 @@ with tf.variable_scope("convolutional"):
 saver = tf.train.Saver(variables)
 saver.restore(sess, save_model_path)
 
-@app.route("/")
-def home():
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def home(path):
 	return render_template("home.html")
 
 @app.route('/canvas', methods=['POST'])

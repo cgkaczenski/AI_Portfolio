@@ -1,5 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Application from './components/Application.react';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-ReactDOM.render(<Application />, document.getElementById('root'));
+import Application from './components/Application.react';
+import Vision from './components/Vision.react';
+
+
+ReactDOM.render(
+	<Router>
+		<Switch>
+			<Route exact path="/" component={Application}/>
+			<Route path="/vision" component={Vision}/>
+		</Switch>
+	</Router>
+	, document.getElementById('root')
+);
