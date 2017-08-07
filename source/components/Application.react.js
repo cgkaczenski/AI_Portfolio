@@ -6,7 +6,7 @@ import React from 'react';
 class Application extends React.Component {
   render() {
   	const jumboStyle = {
-  		textAlign: 'center !important'
+  		textAlign: 'center'
   	};
 
     return (

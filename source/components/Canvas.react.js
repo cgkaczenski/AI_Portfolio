@@ -101,10 +101,6 @@ class Canvas extends React.Component {
     }
 
   render () {
-    const buttonStyle = {
-      display: 'block',
-      textAlign: 'center !important'
-    };
 
       return (
     	<div>
