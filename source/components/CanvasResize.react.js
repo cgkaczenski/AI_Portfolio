@@ -107,7 +107,7 @@ class CanvasResize extends React.Component {
     return (
     	<div>
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-1">
           </div>
           <div className="col-md-4">
             <canvas
@@ -121,9 +121,9 @@ class CanvasResize extends React.Component {
               <a className="btn btn-default" onClick={this.initialize}> Clear </a>
             </p>
           </div>
-          <div className="col-md-1">
+          <div className="col-md-2">
           </div>
-          <div className="col-md-5">
+          <div className="col-md-5 col-lg-4">
             <h1>Result:{this.state.text}</h1>
             <Accuracy result={this.state.index} onClick={this.initialize}/>
           </div>

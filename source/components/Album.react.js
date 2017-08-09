@@ -78,9 +78,6 @@ class Album extends React.Component {
             </div>
           </div>
         </div>
-        <div className="row">
-      </div>
-
       </div>
     
     );
