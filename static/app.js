@@ -27622,6 +27622,106 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Accuracy = function (_React$Component) {
+  _inherits(Accuracy, _React$Component);
+
+  function Accuracy(props) {
+    _classCallCheck(this, Accuracy);
+
+    var _this = _possibleConstructorReturn(this, (Accuracy.__proto__ || Object.getPrototypeOf(Accuracy)).call(this, props));
+
+    _this.state = { count: 100, correct: 79,
+      letterCorrect: [7, 7, 10, 9, 8, 8, 8, 5, 9, 8],
+      letterCount: Array(10).fill(10) };
+
+    _this.handleCorrect = _this.handleCorrect.bind(_this);
+    _this.handleIncorrect = _this.handleIncorrect.bind(_this);
+    return _this;
+  }
+
+  _createClass(Accuracy, [{
+    key: 'handleCorrect',
+    value: function handleCorrect(id) {
+      if (this.props.result != 10) {
+        var letter = this.state.letterCount.slice();
+        letter[id] += 1;
+        this.setState({ letterCount: letter });
+
+        var correct = this.state.letterCorrect.slice();
+        correct[id] += 1;
+        this.setState({ letterCorrect: correct });
+
+        this.setState({ count: this.state.count + 1 });
+        this.setState({ correct: this.state.correct + 1 });
+
+        this.setState({ correct: this.state.correct + 1 });
+
+        this.props.onClick();
+      }
+    }
+  }, {
+    key: 'handleIncorrect',
+    value: function handleIncorrect(id) {
+      if (this.props.result != 10) {
+        this.setState({ count: this.state.count + 1 });
+
+        var letter = this.state.letterCount.slice();
+        letter[id] += 1;
+        this.setState({ letterCount: letter });
+
+        this.props.onClick();
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Total Accuracy: ',
+          (this.state.correct / this.state.count * 100.0).toPrecision(4),
+          ' %'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Number of Trials: ',
+          this.state.count
+        )
+      );
+    }
+  }]);
+
+  return Accuracy;
+}(_react2.default.Component);
+
+module.exports = Accuracy;
+
+},{"react":249,"react-dom":72}],254:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27781,7 +27881,7 @@ var Album = function (_React$Component) {
 
 module.exports = Album;
 
-},{"react":249}],254:[function(require,module,exports){
+},{"react":249}],255:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -27850,7 +27950,7 @@ var Application = function (_React$Component) {
 
 module.exports = Application;
 
-},{"./Album.react":253,"./Canvas.react":255,"./Navbar.react":256,"react":249}],255:[function(require,module,exports){
+},{"./Album.react":254,"./Canvas.react":256,"./Navbar.react":258,"react":249}],256:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28032,7 +28132,208 @@ var Canvas = function (_React$Component) {
 
 module.exports = Canvas;
 
-},{"axios":1,"react":249,"react-dom":72}],256:[function(require,module,exports){
+},{"axios":1,"react":249,"react-dom":72}],257:[function(require,module,exports){
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _axios = require('axios');
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Accuracy = require('./Accuracy.react');
+
+var _Accuracy2 = _interopRequireDefault(_Accuracy);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var CanvasResize = function (_React$Component) {
+  _inherits(CanvasResize, _React$Component);
+
+  function CanvasResize(props) {
+    _classCallCheck(this, CanvasResize);
+
+    var _this = _possibleConstructorReturn(this, (CanvasResize.__proto__ || Object.getPrototypeOf(CanvasResize)).call(this, props));
+
+    _this.state = { text: [], index: 10 };
+
+    _this.onMouseDown = _this.onMouseDown.bind(_this);
+    _this.onMouseUp = _this.onMouseUp.bind(_this);
+    _this.onMouseMove = _this.onMouseMove.bind(_this);
+    _this.initialize = _this.initialize.bind(_this);
+    return _this;
+  }
+
+  _createClass(CanvasResize, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.canvas = _reactDom2.default.findDOMNode(this.canvasRef);
+      this.canvas.width = this.props.width;
+      this.canvas.height = this.props.height;
+      this.lineWidth = this.props.lineWidth;
+      this.ctx = this.canvas.getContext('2d');
+      this.initialize();
+    }
+  }, {
+    key: 'initialize',
+    value: function initialize() {
+      this.ctx.fillStyle = '#FFFFFF';
+      this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.lineWidth = 1;
+      this.ctx.strokeRect(0, 0, this.canvas.width, this.canvas.height);
+      this.ctx.lineWidth = 0.05;
+      this.setState({ text: [] });
+      this.setState({ index: 10 });
+    }
+  }, {
+    key: 'getCursorPosition',
+    value: function getCursorPosition(e) {
+      var _canvas$getBoundingCl = this.canvas.getBoundingClientRect(),
+          top = _canvas$getBoundingCl.top,
+          left = _canvas$getBoundingCl.left;
+
+      return {
+        x: e.clientX - left,
+        y: e.clientY - top
+      };
+    }
+  }, {
+    key: 'onMouseDown',
+    value: function onMouseDown(e) {
+      var prev = this.getCursorPosition(e);
+      this.prev = prev;
+      this.drawing = true;
+    }
+  }, {
+    key: 'onMouseUp',
+    value: function onMouseUp(e) {
+      var _this2 = this;
+
+      this.drawing = false;
+
+      var img = new Image();
+      img.onload = function () {
+        var inputs = [];
+
+        //Create a new canvas context in order to resize the image
+        var context = document.createElement('canvas').getContext('2d');
+
+        //Resize the image by redrawing it
+        context.drawImage(img, 0, 0, img.width, img.height, 0, 0, 28, 28);
+
+        //grab the raw image data
+        var data = context.getImageData(0, 0, 28, 28).data;
+
+        //Change the encoding of the image data (UInt8 clampedArray)
+        for (var i = 0; i < 28; i++) {
+          for (var j = 0; j < 28; j++) {
+            var n = 4 * (i * 28 + j);
+            inputs[i * 28 + j] = (data[n + 0] + data[n + 1] + data[n + 2]) / 3;
+          }
+        }
+
+        _axios2.default.post('/canvas', {
+          data: inputs
+        }).then(function (response) {
+          var index = response.data.result;
+          var text = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+          this.setState({ text: text[index] });
+          this.setState({ index: index });
+        }.bind(_this2)).catch(function (error) {
+          console.log(error);
+        });
+      };
+      img.src = this.canvas.toDataURL();
+    }
+  }, {
+    key: 'onMouseMove',
+    value: function onMouseMove(e) {
+      if (this.drawing) {
+        var curr = this.getCursorPosition(e);
+        this.ctx.lineWidth = this.lineWidth;
+        this.ctx.lineCap = 'round';
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.prev.x, this.prev.y);
+        this.ctx.lineTo(curr.x, curr.y);
+        this.ctx.stroke();
+        this.ctx.closePath();
+        this.prev = curr;
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this3 = this;
+
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'row' },
+          _react2.default.createElement('div', { className: 'col-md-2' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-4' },
+            _react2.default.createElement('canvas', {
+              ref: function ref(canvas) {
+                _this3.canvasRef = canvas;
+              },
+              onMouseDown: this.onMouseDown,
+              onMouseUp: this.onMouseUp,
+              onMouseMove: this.onMouseMove }),
+            _react2.default.createElement(
+              'p',
+              null,
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-primary', 'data-toggle': 'collapse', 'data-target': '#navHeader', 'aria-expanded': 'false' },
+                'Contact'
+              ),
+              _react2.default.createElement(
+                'a',
+                { className: 'btn btn-default', onClick: this.initialize },
+                ' Clear '
+              )
+            )
+          ),
+          _react2.default.createElement('div', { className: 'col-md-1' }),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-5' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Result:',
+              this.state.text
+            ),
+            _react2.default.createElement(_Accuracy2.default, { result: this.state.index, onClick: this.initialize })
+          )
+        )
+      );
+    }
+  }]);
+
+  return CanvasResize;
+}(_react2.default.Component);
+
+module.exports = CanvasResize;
+
+},{"./Accuracy.react":253,"axios":1,"react":249,"react-dom":72}],258:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28161,7 +28462,7 @@ var Navbar = function (_React$Component) {
 
 module.exports = Navbar;
 
-},{"react":249}],257:[function(require,module,exports){
+},{"react":249}],259:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -28174,9 +28475,13 @@ var _reactResponsive = require('react-responsive');
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-var _Canvas = require('./Canvas.react');
+var _CanvasResize = require('./CanvasResize.react');
 
-var _Canvas2 = _interopRequireDefault(_Canvas);
+var _CanvasResize2 = _interopRequireDefault(_CanvasResize);
+
+var _Navbar = require('./Navbar.react');
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28198,68 +28503,91 @@ var Vision = function (_React$Component) {
   _createClass(Vision, [{
     key: 'render',
     value: function render() {
+      var center = {
+        textAlign: 'center'
+      };
+
       return _react2.default.createElement(
         'div',
         null,
+        _react2.default.createElement(_Navbar2.default, null),
         _react2.default.createElement(
-          _reactResponsive2.default,
-          { minWidth: 1200 },
-          function (matches) {
-            if (matches) {
-              return _react2.default.createElement(
-                'div',
+          'div',
+          { style: center },
+          _react2.default.createElement(
+            'div',
+            { className: 'jumbotron' },
+            _react2.default.createElement(
+              'h1',
+              null,
+              'Draw a Letter ',
+              _react2.default.createElement(
+                'small',
                 null,
-                _react2.default.createElement(_Canvas2.default, { height: '600', width: '600', lineWidth: '50' })
-              );
-            } else {
-              return _react2.default.createElement('div', null);
+                ' A,B,C,D,E,F,G,H,I,J'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { minWidth: 1200 },
+            function (matches) {
+              if (matches) {
+                return _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(_CanvasResize2.default, { height: '600', width: '600', lineWidth: '50' })
+                );
+              } else {
+                return _react2.default.createElement('div', null);
+              }
             }
-          }
-        ),
-        _react2.default.createElement(
-          _reactResponsive2.default,
-          { maxWidth: 1200, minWidth: 992 },
-          function (matches) {
-            if (matches) {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_Canvas2.default, { height: '450', width: '450', lineWidth: '25' })
-              );
-            } else {
-              return _react2.default.createElement('div', null);
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { maxWidth: 1200, minWidth: 992 },
+            function (matches) {
+              if (matches) {
+                return _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(_CanvasResize2.default, { height: '450', width: '450', lineWidth: '25' })
+                );
+              } else {
+                return _react2.default.createElement('div', null);
+              }
             }
-          }
-        ),
-        _react2.default.createElement(
-          _reactResponsive2.default,
-          { maxWidth: 992, minWidth: 768 },
-          function (matches) {
-            if (matches) {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_Canvas2.default, { height: '350', width: '350', lineWidth: '20' })
-              );
-            } else {
-              return _react2.default.createElement('div', null);
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { maxWidth: 992, minWidth: 768 },
+            function (matches) {
+              if (matches) {
+                return _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(_CanvasResize2.default, { height: '350', width: '350', lineWidth: '20' })
+                );
+              } else {
+                return _react2.default.createElement('div', null);
+              }
             }
-          }
-        ),
-        _react2.default.createElement(
-          _reactResponsive2.default,
-          { maxWidth: 768 },
-          function (matches) {
-            if (matches) {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_Canvas2.default, { height: '250', width: '250', lineWidth: '15' })
-              );
-            } else {
-              return _react2.default.createElement('div', null);
+          ),
+          _react2.default.createElement(
+            _reactResponsive2.default,
+            { maxWidth: 768 },
+            function (matches) {
+              if (matches) {
+                return _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(_CanvasResize2.default, { height: '250', width: '250', lineWidth: '15' })
+                );
+              } else {
+                return _react2.default.createElement('div', null);
+              }
             }
-          }
+          )
         )
       );
     }
@@ -28270,7 +28598,7 @@ var Vision = function (_React$Component) {
 
 module.exports = Vision;
 
-},{"./Canvas.react":255,"react":249,"react-responsive":199}],258:[function(require,module,exports){
+},{"./CanvasResize.react":257,"./Navbar.react":258,"react":249,"react-responsive":199}],260:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -28304,4 +28632,4 @@ _reactDom2.default.render(_react2.default.createElement(
 	)
 ), document.getElementById('root'));
 
-},{"./components/Application.react":254,"./components/Vision.react":257,"react":249,"react-dom":72,"react-router-dom":211}]},{},[258]);
+},{"./components/Application.react":255,"./components/Vision.react":259,"react":249,"react-dom":72,"react-router-dom":211}]},{},[260]);
