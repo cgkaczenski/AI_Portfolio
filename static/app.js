@@ -47562,12 +47562,12 @@ var CanvasResize = function (_React$Component) {
               _react2.default.createElement(
                 'a',
                 { className: 'btn btn-primary', 'data-toggle': 'collapse', 'data-target': '#navHeader', 'aria-expanded': 'false' },
-                'Contact'
+                'Contact Me'
               ),
               _react2.default.createElement(
                 'a',
                 { className: 'btn btn-default', onClick: this.initialize },
-                ' Clear '
+                ' Clear Canvas'
               )
             )
           ),
@@ -47663,7 +47663,7 @@ var Navbar = function (_React$Component) {
 																		_react2.default.createElement(
 																				'p',
 																				{ style: textStyle },
-																				'Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.'
+																				'I am currently studying Machine Learning at Udacity. I graduated from the University of Arkansas at Little Rock with a degree in Computer Science. Before that, I was working at K&S Professional Research Service, a clinical research company. My interests include Artificial Intelligence, Machine Learning, and Web Development.'
 																		)
 																),
 																_react2.default.createElement('div', { className: 'col-md-4 col-lg-4' }),
@@ -47681,12 +47681,30 @@ var Navbar = function (_React$Component) {
 																				_react2.default.createElement(
 																						'li',
 																						null,
-																						'Email'
+																						'Email: Kzpulaski@gmail.com'
 																				),
 																				_react2.default.createElement(
 																						'li',
 																						null,
-																						'Github'
+																						_react2.default.createElement(
+																								'a',
+																								{ href: 'https://github.com/cgkaczenski' },
+																								'Github'
+																						)
+																				),
+																				_react2.default.createElement(
+																						'li',
+																						null,
+																						_react2.default.createElement(
+																								'a',
+																								{ href: 'https://www.linkedin.com/in/christopher-kaczenski/' },
+																								'Linkedin'
+																						)
+																				),
+																				_react2.default.createElement(
+																						'li',
+																						null,
+																						_react2.default.createElement('img', { src: '../static/profile.jpg', alt: 'Picture', className: 'img-circle', height: '106', width: '126' })
 																				)
 																		)
 																)
@@ -47698,8 +47716,8 @@ var Navbar = function (_React$Component) {
 														_react2.default.createElement('div', { className: 'col-md-2 col-lg-2' }),
 														_react2.default.createElement(
 																'a',
-																{ className: 'navbar-brand', href: '#' },
-																'Brand'
+																{ className: 'navbar-brand' },
+																_react2.default.createElement('img', { alt: 'Hog', src: '../static/pig_brand.png', width: '40', height: '30' })
 														),
 														_react2.default.createElement(
 																'button',

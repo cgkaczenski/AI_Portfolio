@@ -117,8 +117,8 @@ class CanvasResize extends React.Component {
             onMouseMove={this.onMouseMove}>
             </canvas>
             <p>
-              <a className="btn btn-primary" data-toggle="collapse" data-target="#navHeader" aria-expanded="false">Contact</a>
-              <a className="btn btn-default" onClick={this.initialize}> Clear </a>
+              <a className="btn btn-primary" data-toggle="collapse" data-target="#navHeader" aria-expanded="false">Contact Me</a>
+              <a className="btn btn-default" onClick={this.initialize}> Clear Canvas</a>
             </p>
           </div>
           <div className="col-md-2">
