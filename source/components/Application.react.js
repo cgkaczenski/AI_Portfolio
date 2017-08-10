@@ -14,7 +14,8 @@ class Application extends React.Component {
     		<Navbar />
 
 		    <div className="jumbotron" style={jumboStyle}>
-		    	<h1>Draw Something</h1>
+		    	<h1>Page under construction</h1>
+          <h3>Check back tommorrow to see progress :)</h3>
 		      	<Canvas height="350" width="350" lineWidth="20"/>
 		    </div>
 

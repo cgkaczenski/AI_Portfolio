@@ -47196,7 +47196,12 @@ var Application = function (_React$Component) {
           _react2.default.createElement(
             'h1',
             null,
-            'Draw Something'
+            'Page under construction'
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Check back tommorrow to see progress :)'
           ),
           _react2.default.createElement(_Canvas2.default, { height: '350', width: '350', lineWidth: '20' })
         ),
@@ -47663,7 +47668,7 @@ var Navbar = function (_React$Component) {
 																		_react2.default.createElement(
 																				'p',
 																				{ style: textStyle },
-																				'I am currently studying Machine Learning at Udacity. I graduated from the University of Arkansas at Little Rock with a degree in Computer Science. Before that, I was working at K&S Professional Research Service, a clinical research company. My interests include Artificial Intelligence, Machine Learning, and Web Development.'
+																				'I am currently studying Machine Learning at Udacity. I graduated from the University of Arkansas at Little Rock with a degree in Computer Science. Before that, I was working at K&S Professional Research Service, a clinical research company. My interests include Data Science, Machine Learning, and Web Development.'
 																		)
 																),
 																_react2.default.createElement('div', { className: 'col-md-4 col-lg-4' }),

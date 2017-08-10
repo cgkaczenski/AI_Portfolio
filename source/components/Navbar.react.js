@@ -32,7 +32,7 @@ class Navbar extends React.Component {
 			  						Rock with a degree in Computer Science. Before that,
 			  						I was working at K&S Professional Research Service,
 			  						a clinical research company. My interests include
-			  						Artificial Intelligence, Machine Learning, and Web
+			  						Data Science, Machine Learning, and Web
 			  						Development.
 			  					</p>
 		  					</div>
